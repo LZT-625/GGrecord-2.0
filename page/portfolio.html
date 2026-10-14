@@ -39,7 +39,7 @@
     <nav class="navbar" aria-label="主要導覽">
       <a class="brand" href="../index.html" aria-label="回到首頁"><span class="brand-mark" aria-hidden="true">G</span><span class="brand-word">GGTEENS<small>FAN-MADE ARCHIVE</small></span></a>
       <div class="nav-spacer" aria-hidden="true"></div>
-      <div class="site-nav"><a href="last-event.html">演出一覽</a><a href="portfolio.html" aria-current="page">歌曲作品</a><a href="year-recap.html">年度回顧</a><a class="login" href="../index.html#management-note">回首頁</a></div>
+      <div class="site-nav"><a href="last-event.html">演出一覽</a><a href="portfolio.html" aria-current="page">歌曲作品</a><a href="year-recap.html">年度回顧</a><button class="login" id="login-open" type="button" aria-haspopup="dialog" aria-controls="login-dialog">登入</button></div>
     </nav>
   </header>
   <main class="archive-page">
@@ -74,6 +74,17 @@
       <p class="archive-empty" id="song-empty">此類型目前沒有展示樣本。</p>
     </div>
   </main>
+
+  <dialog class="login-dialog" id="login-dialog" aria-labelledby="login-dialog-title">
+    <div class="login-dialog-inner">
+      <div class="window-bar"><span>ADMIN_LOGIN.exe</span><span class="window-controls" aria-hidden="true"><i></i><i></i><i></i></span></div>
+      <h2 id="login-dialog-title">管理登入</h2>
+      <p>登入將以彈窗方式呈現；未來驗證成功後再進入後台管理頁面，不另設獨立登入頁。</p>
+      <p>目前尚未連接帳號驗證與後台權限。此彈窗僅為介面預覽，不會收集或提交帳號資料。</p>
+      <div class="login-dialog-actions"><form method="dialog"><button class="close-button" type="submit">關閉</button></form></div>
+    </div>
+  </dialog>
+
   <footer class="site-footer"><p><strong>GGteens Fan-made Archive</strong></p><p>粉絲製作・非官方網站；資料僅供介面與內容顯示測試。</p></footer>
   <script src="../js/main.js" defer></script>
 </body>
