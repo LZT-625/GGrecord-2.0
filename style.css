@@ -22,7 +22,8 @@
     .site-nav{display:flex;align-items:center;justify-content:flex-end;gap:8px}
     .site-nav a{padding:8px 13px;border:1px solid transparent;border-radius:999px;font-size:.84rem;font-weight:800;white-space:nowrap;transition:background .18s ease,transform .18s ease,border-color .18s ease}
     .site-nav a:hover{background:var(--orange);border-color:var(--ink);transform:translateY(-1px)}
-    .site-nav .login{padding:8px 13px;border:1px solid var(--ink);border-radius:999px;background:var(--deep-teal);color:var(--paper);font-size:.84rem;font-weight:800;white-space:nowrap;cursor:pointer;transition:background .18s ease,transform .18s ease}\n    .site-nav .login:hover{background:var(--teal);transform:translateY(-1px)}
+    .site-nav .login{padding:8px 13px;border:1px solid var(--ink);border-radius:999px;background:var(--deep-teal);color:var(--paper);font-size:.84rem;font-weight:800;white-space:nowrap;cursor:pointer;transition:background .18s ease,transform .18s ease}
+    .site-nav .login:hover{background:var(--teal);transform:translateY(-1px)}
     .site-nav a.login:hover{background:var(--teal)}
     main>section{position:relative;scroll-margin-top:0}
     #mainpage{min-height:100svh;display:grid;grid-template-columns:minmax(0,3fr) minmax(280px,1fr);overflow:hidden;padding-top:0;background:var(--mist)}
