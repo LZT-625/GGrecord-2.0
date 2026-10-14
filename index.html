@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#F2DCC2">
   <meta name="description" content="GGteens 粉絲製作的樂團演出與作品紀錄。非官方網站。">
   <title>跟館青出去走一走｜GGteens 粉絲紀錄</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="site-header">
@@ -18,9 +18,9 @@
       <div class="nav-spacer" aria-hidden="true"></div>
       <div class="site-nav">
         
-        <a href="last-event.html">演出一覽</a>
-        <a href="portfolio.html">歌曲作品</a>
-        <a href="year-recap.html">年度回顧</a>
+        <a href="page/last-event.html">演出一覽</a>
+        <a href="page/portfolio.html">歌曲作品</a>
+        <a href="page/year-recap.html">年度回顧</a>
         <button class="login" id="login-open" type="button" aria-haspopup="dialog" aria-controls="login-dialog">登入</button>
       </div>
     </nav>
@@ -123,13 +123,6 @@
     <p>所有活動安排及作品資料均以樂團及活動主辦方公開資訊為準。</p>
     <p>本網站為非官方粉絲製作；「登入」目前以彈窗呈現，尚未連接帳號驗證、權限控管或後台發布功能。</p>
   </footer>
-  <script>
-    const loginOpen = document.getElementById("login-open");
-    const loginDialog = document.getElementById("login-dialog");
-    loginOpen.addEventListener("click", () => loginDialog.showModal());
-    loginDialog.addEventListener("click", (event) => {
-      if (event.target === loginDialog) loginDialog.close();
-    });
-  </script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
