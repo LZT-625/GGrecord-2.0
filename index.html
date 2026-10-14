@@ -71,7 +71,7 @@
         </div>
 
         <div id="upcoming-events" class="upcoming-events-list">
-          <article class="upcoming-event-card">
+          <article class="upcoming-event-card" aria-label="查看演出活動詳細資料：2026 潮派鹿港 Lukang Music Festival" data-details="[[&quot;演出時間&quot;,&quot;2026-10-17&quot;],[&quot;演出活動名稱&quot;,&quot;2026 潮派鹿港 Lukang Music Festival&quot;],[&quot;活動類型&quot;,&quot;音樂祭/節&quot;],[&quot;活動所在城市&quot;,&quot;中部 | 彰化&quot;],[&quot;活動詳細地點&quot;,&quot;區域：中部；地點名稱：彰化 • 鹿港 \\| 鹿港體育場；地點類型：戶外開放空間；城市：彰化&quot;],[&quot;資訊來源&quot;,&quot;https://www.instagram.com/p/DauAd0rEd6t/?img_index=2&quot;]]">
             <div class="upcoming-event-date-block">
               <div class="upcoming-event-date-row"><span class="upcoming-event-date">10.17</span><span class="upcoming-event-weekday"><span>週</span><span>六</span></span></div>
               <span class="upcoming-event-time">2026 / OCT</span>
@@ -80,9 +80,9 @@
               <h3>2026 潮派鹿港 Lukang Music Festival</h3>
               <div class="upcoming-event-meta"><span>音樂祭／節</span><span>·</span><span>彰化</span></div>
             </div>
-            <a class="upcoming-event-detail" href="page/last-event.html">查看演出一覽</a>
+            <span class="upcoming-event-detail detail-hint">點擊查看詳細資料 ↗</span>
           </article>
-          <article class="upcoming-event-card">
+          <article class="upcoming-event-card" aria-label="查看演出活動詳細資料：2026 GIMA LIVE 金音獎" data-details="[[&quot;演出時間&quot;,&quot;2026-10-21 10:30:00Z ～ 2026-10-21 11:00:00Z&quot;],[&quot;演出活動名稱&quot;,&quot;2026 GIMA LIVE 金音獎&quot;],[&quot;活動類型&quot;,&quot;商演&quot;],[&quot;活動詳細地點&quot;,&quot;地點名稱：台北 • 大安 \\| Corner MAX&quot;]]">
             <div class="upcoming-event-date-block">
               <div class="upcoming-event-date-row"><span class="upcoming-event-date">10.21</span><span class="upcoming-event-weekday"><span>週</span><span>三</span></span></div>
               <span class="upcoming-event-time">2026 / OCT</span>
@@ -91,9 +91,9 @@
               <h3>2026 GIMA LIVE 金音獎</h3>
               <div class="upcoming-event-meta"><span>商演</span><span>·</span><span>城市待補</span></div>
             </div>
-            <a class="upcoming-event-detail" href="page/last-event.html">查看演出一覽</a>
+            <span class="upcoming-event-detail detail-hint">點擊查看詳細資料 ↗</span>
           </article>
-          <article class="upcoming-event-card">
+          <article class="upcoming-event-card" aria-label="查看演出活動詳細資料：2026 浪人祭 Vegabond Fest." data-details="[[&quot;演出時間&quot;,&quot;2026-11-07&quot;],[&quot;演出活動名稱&quot;,&quot;2026 浪人祭 Vegabond Fest.&quot;],[&quot;活動類型&quot;,&quot;週&quot;],[&quot;活動所在城市&quot;,&quot;六&quot;]]">
             <div class="upcoming-event-date-block">
               <div class="upcoming-event-date-row"><span class="upcoming-event-date">11.07</span><span class="upcoming-event-weekday"><span>週</span><span>六</span></span></div>
               <span class="upcoming-event-time">2026 / NOV</span>
@@ -102,14 +102,23 @@
               <h3>2026 浪人祭 Vegabond Fest.</h3>
               <div class="upcoming-event-meta"><span>音樂祭／節</span><span>·</span><span>台南</span></div>
             </div>
-            <a class="upcoming-event-detail" href="page/last-event.html">查看演出一覽</a>
+            <span class="upcoming-event-detail detail-hint">點擊查看詳細資料 ↗</span>
           </article>
         </div>
       </div>
     </section>
   </main>
 
-<dialog class="login-dialog" id="login-dialog" aria-labelledby="login-dialog-title">
+
+  <dialog class="detail-dialog" id="detail-dialog" aria-labelledby="detail-dialog-title">
+    <section class="detail-window">
+      <header class="detail-titlebar"><span class="detail-window-icon" aria-hidden="true">▣</span><span class="detail-titlebar-text" id="detail-dialog-title">DETAIL_VIEW.exe</span><button type="button" class="detail-close" aria-label="關閉詳細資料" title="關閉">×</button></header>
+      <div class="detail-content"><div class="detail-property-list" id="detail-property-list"></div></div>
+      <footer class="detail-statusbar"><span>GGteens Fan-made Archive</span><span>DETAILS</span></footer>
+    </section>
+  </dialog>
+
+  <dialog class="login-dialog" id="login-dialog" aria-labelledby="login-dialog-title">
     <div class="login-dialog-inner">
       <div class="window-bar"><span>ADMIN_LOGIN.exe</span><span class="window-controls" aria-hidden="true"><i></i><i></i><i></i></span></div>
       <h2 id="login-dialog-title">管理登入</h2>
