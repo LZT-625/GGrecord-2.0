@@ -83,7 +83,7 @@ function openDetailCard(card) {
   detailDialog.showModal();
 }
 
-document.querySelectorAll(".archive-card[ data-details ], .song-card[ data-details ], .archive-card[data-details], .song-card[data-details]").forEach((card) => {
+document.querySelectorAll(".archive-card[data-details], .song-card[data-details], .upcoming-event-card[data-details]").forEach((card) => {
   card.addEventListener("click", (event) => {
     if (event.target.closest("a, button")) return;
     openDetailCard(card);
