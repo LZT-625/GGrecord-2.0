@@ -149,3 +149,85 @@
 body:has(.login-dialog[open]) { overflow:hidden; }
 @media(max-width:700px) { .login-dialog { max-width:calc(100vw - 28px); } }
 
+
+
+/* 電腦版視覺微調：復古視窗框架搭配柔和 Claymorphism 層次 */
+@media (min-width: 701px) {
+  .site-header {
+    left: 50%;
+    width: min(95%, 1440px);
+    transform: translateX(-50%);
+    box-shadow: 0 8px 24px rgba(51,43,39,.09), 3px 4px 0 rgba(51,43,39,.08);
+  }
+
+  .navbar {
+    gap: clamp(16px, 2vw, 30px);
+    padding-inline: clamp(18px, 2.2vw, 32px);
+  }
+
+  .site-nav {
+    gap: clamp(4px, .65vw, 10px);
+  }
+
+  .site-nav a {
+    transition: background .2s ease, transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+  }
+
+  #mainpage {
+    grid-template-columns: minmax(0, 1.9fr) minmax(320px, .9fr);
+  }
+
+  .home {
+    padding-left: clamp(48px, 5.5vw, 104px);
+    padding-right: clamp(40px, 4.5vw, 84px);
+  }
+
+  .home-copy {
+    max-width: 980px;
+  }
+
+  .news {
+    padding: 124px clamp(24px, 2.8vw, 46px) 44px;
+  }
+
+  .news-card {
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(0,0,0,.10), 3px 4px 0 rgba(0,0,0,.10), inset 0 1px 0 rgba(255,255,255,.85);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+
+  .news-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(0,0,0,.13), 2px 3px 0 rgba(0,0,0,.08), inset 0 1px 0 rgba(255,255,255,.9);
+  }
+
+  .window-bar {
+    box-shadow: 0 7px 16px rgba(0,0,0,.08), 2px 3px 0 rgba(0,0,0,.10), inset 0 1px 0 rgba(255,255,255,.7);
+  }
+
+  #latest_event {
+    padding-left: clamp(64px, 7vw, 132px);
+    padding-right: clamp(64px, 7vw, 132px);
+  }
+
+  .upcoming-event-card {
+    border-radius: 18px;
+    box-shadow: 0 12px 26px rgba(51,43,39,.08), 4px 5px 0 rgba(51,43,39,.10), inset 0 1px 0 rgba(255,255,255,.85);
+  }
+
+  .upcoming-event-card:hover,
+  .upcoming-event-card:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px rgba(51,43,39,.11), 2px 3px 0 rgba(51,43,39,.08), inset 0 1px 0 rgba(255,255,255,.9);
+  }
+
+  .section-link {
+    border-radius: 14px;
+    box-shadow: 0 8px 18px rgba(51,43,39,.08), 2px 3px 0 rgba(51,43,39,.12), inset 0 1px 0 rgba(255,255,255,.4);
+  }
+
+  .section-link:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(51,43,39,.1), 1px 2px 0 rgba(51,43,39,.10), inset 0 1px 0 rgba(255,255,255,.5);
+  }
+}
