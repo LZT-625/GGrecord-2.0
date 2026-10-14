@@ -1,7 +1,7 @@
 :root{
-      --sand:#BF9A56;--cream:#F2DCC2;--paper:#fff8ed;--orange:#F2A663;
-      --coral:#F28651;--rose:#D9696A;--mist:#AEBABF;--ink:#332b27;
-      --muted:#706259;--line:rgba(51,43,39,.2);--teal:#437381;
+      --sand:#BF9A56;--cream:#F2DCC2;--paper:#fff8ed;--orange:#F28651;
+      --coral:#F28651;--rose:#D9696A;--mist:#AEBABF;--ink:#29201C;
+      --muted:#5E5149;--line:rgba(41,32,28,.2);--teal:#29201C;
       --deep-teal:#033E4E;--radius:18px;--shadow:6px 7px 0 rgba(51,43,39,.14);
     }
     *{box-sizing:border-box}
@@ -27,7 +27,7 @@
     .site-nav a.login:hover{background:var(--teal)}
     main>section{position:relative;scroll-margin-top:0}
     #mainpage{min-height:100svh;display:grid;grid-template-columns:minmax(0,3fr) minmax(280px,1fr);overflow:hidden;padding-top:0;background:var(--mist)}
-    .home{position:relative;isolation:isolate;min-width:0;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;padding:0 5vw 8vh;background:linear-gradient(130deg,rgba(242,166,99,.2),rgba(217,105,106,.12)),radial-gradient(ellipse at 75% 22%,rgba(255,248,237,.65) 0 9%,transparent 9.5%),linear-gradient(145deg,#F2A663 0%,#F28651 54%,#D9696A 100%)}
+    .home{position:relative;isolation:isolate;min-width:0;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;padding:0 5vw 8vh;background:linear-gradient(130deg,rgba(242,166,99,.2),rgba(217,105,106,.12)),radial-gradient(ellipse at 75% 22%,rgba(255,248,237,.65) 0 9%,transparent 9.5%),linear-gradient(145deg,#F28651 0%,#D9696A 100%)}
     .home:before{content:"";position:absolute;z-index:-1;width:min(60vw,680px);aspect-ratio:1;right:-8%;top:10%;border:1px solid rgba(51,43,39,.28);border-radius:50%;box-shadow:0 0 0 24px rgba(255,248,237,.12),0 0 0 52px rgba(255,248,237,.09),0 0 0 82px rgba(51,43,39,.045)}
     .home:after{content:"GG / FAN ARCHIVE";position:absolute;right:5%;top:18%;padding:10px 14px;background:var(--paper);border:1px solid var(--ink);border-radius:9px;box-shadow:4px 5px 0 rgba(51,43,39,.16);font-size:.7rem;font-weight:1000;letter-spacing:.14em;transform:rotate(5deg)}
     .home-copy{width:100%;max-width:900px;position:relative;z-index:1}
@@ -231,3 +231,48 @@ body:has(.login-dialog[open]) { overflow:hidden; }
     box-shadow: 0 10px 20px rgba(51,43,39,.1), 1px 2px 0 rgba(51,43,39,.10), inset 0 1px 0 rgba(255,255,255,.5);
   }
 }
+/* 2026 公開端配色校正：六色規範；深青色僅保留少量復古裝飾 */
+
+:root{
+  --sand:#BF9A56;
+  --cream:#F2DCC2;
+  --paper:#FFF8ED;
+  --orange:#F28651;
+  --coral:#F28651;
+  --rose:#D9696A;
+  --mist:#AEBABF;
+  --ink:#29201C;
+  --muted:#5E5149;
+  --line:rgba(41,32,28,.2);
+  --teal:var(--ink);
+  --deep-teal:#033E4E;
+  --shadow:6px 7px 0 rgba(41,32,28,.14);
+}
+:focus-visible{outline-color:var(--orange)}
+.site-header{border-color:var(--line)}
+.site-nav a:hover{background:var(--orange);color:var(--ink)}
+.site-nav .login,
+.site-nav a.login{background:var(--orange);color:var(--ink)}
+.site-nav .login:hover,
+.site-nav a.login:hover{background:var(--rose);color:var(--ink)}
+#mainpage{background:var(--mist)}
+.news{background:var(--mist);color:var(--ink);border-left-color:var(--ink)}
+.news h2,.news p,.news .news-intro,.news .news-note{color:var(--ink)}
+.news .news-intro{opacity:.82}
+.news .news-note{opacity:.78}
+.section-title,
+.upcoming-event-card h3,
+.login-dialog h2,
+.archive-card h3,
+.song-card h3,
+.song-section-label{color:var(--ink)}
+.upcoming-event-time{color:var(--ink)}
+.filter-chip[aria-pressed="true"]{background:var(--orange);color:var(--ink)}
+.detail-hint{color:var(--ink)}
+.detail-window-icon{color:var(--ink)}
+.detail-property-value a{color:var(--ink)}
+.home-copy h1{color:var(--ink)}
+.home-copy p{color:var(--ink)}
+.login-dialog button.close-button{background:var(--orange);color:var(--ink)}
+/* 深青色僅用於復古視窗標題列等小面積裝飾，不用於內文與大標題 */
+
