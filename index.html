@@ -6,144 +6,7 @@
   <meta name="theme-color" content="#F2DCC2">
   <meta name="description" content="GGteens 粉絲製作的樂團演出與作品紀錄。非官方網站。">
   <title>跟館青出去走一走｜GGteens 粉絲紀錄</title>
-  <style>
-    :root{
-      --sand:#BF9A56;--cream:#F2DCC2;--paper:#fff8ed;--orange:#F2A663;
-      --coral:#F28651;--rose:#D9696A;--mist:#AEBABF;--ink:#332b27;
-      --muted:#706259;--line:rgba(51,43,39,.2);--teal:#437381;
-      --deep-teal:#033E4E;--radius:18px;--shadow:6px 7px 0 rgba(51,43,39,.14);
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:88px}
-    body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.6}
-    a{color:inherit;text-decoration:none}
-    button{font:inherit}
-    img{display:block;max-width:100%}
-    h1,h2,h3,p{overflow-wrap:anywhere}
-    :focus-visible{outline:3px solid var(--deep-teal);outline-offset:4px}
-    .site-header{position:fixed;z-index:50;top:12px;left:2.5%;width:95%;height:68px;background:rgba(255,248,237,.94);border:1px solid var(--line);border-radius:17px;box-shadow:4px 5px 0 rgba(51,43,39,.12);backdrop-filter:blur(12px)}
-    .navbar{height:100%;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:24px;padding:0 22px}
-    .brand{display:flex;align-items:center;gap:10px;white-space:nowrap}
-    .brand-mark{width:36px;height:36px;display:grid;place-items:center;background:var(--rose);border:1px solid var(--ink);border-radius:11px;box-shadow:2px 3px 0 var(--ink);font-size:19px;font-weight:1000;color:var(--paper);transform:rotate(-4deg)}
-    .brand-word{font-size:1.08rem;line-height:1.05;font-weight:1000;letter-spacing:.045em}
-    .brand-word small{display:block;margin-top:4px;color:var(--muted);font-size:.58rem;letter-spacing:.12em;font-weight:800}
-    .nav-spacer{min-width:0}
-    .site-nav{display:flex;align-items:center;justify-content:flex-end;gap:8px}
-    .site-nav a{padding:8px 13px;border:1px solid transparent;border-radius:999px;font-size:.84rem;font-weight:800;white-space:nowrap;transition:background .18s ease,transform .18s ease,border-color .18s ease}
-    .site-nav a:hover{background:var(--orange);border-color:var(--ink);transform:translateY(-1px)}
-    .site-nav a.login{background:var(--deep-teal);color:var(--paper);border-color:var(--ink)}
-    .site-nav a.login:hover{background:var(--teal)}
-    main>section{position:relative;scroll-margin-top:0}
-    #mainpage{min-height:100svh;display:grid;grid-template-columns:minmax(0,3fr) minmax(280px,1fr);overflow:hidden;padding-top:0;background:var(--mist)}
-    .home{position:relative;isolation:isolate;min-width:0;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;padding:0 5vw 8vh;background:linear-gradient(130deg,rgba(242,166,99,.2),rgba(217,105,106,.12)),radial-gradient(ellipse at 75% 22%,rgba(255,248,237,.65) 0 9%,transparent 9.5%),linear-gradient(145deg,#F2A663 0%,#F28651 54%,#D9696A 100%)}
-    .home:before{content:"";position:absolute;z-index:-1;width:min(60vw,680px);aspect-ratio:1;right:-8%;top:10%;border:1px solid rgba(51,43,39,.28);border-radius:50%;box-shadow:0 0 0 24px rgba(255,248,237,.12),0 0 0 52px rgba(255,248,237,.09),0 0 0 82px rgba(51,43,39,.045)}
-    .home:after{content:"GG / FAN ARCHIVE";position:absolute;right:5%;top:18%;padding:10px 14px;background:var(--paper);border:1px solid var(--ink);border-radius:9px;box-shadow:4px 5px 0 rgba(51,43,39,.16);font-size:.7rem;font-weight:1000;letter-spacing:.14em;transform:rotate(5deg)}
-    .home-copy{width:100%;max-width:900px;position:relative;z-index:1}
-    .window-label{display:inline-flex;align-items:center;gap:8px;margin-bottom:18px;padding:7px 11px;background:rgba(255,248,237,.8);border:1px solid var(--ink);border-radius:8px;box-shadow:3px 3px 0 rgba(51,43,39,.12);font-size:.72rem;font-weight:900;letter-spacing:.1em}
-    .window-label:before{content:"";width:8px;height:8px;background:var(--rose);border:1px solid var(--ink);border-radius:50%}
-    .home-copy h1{max-width:850px;margin:0 0 16px;font-size:clamp(2.7rem,6.1vw,6.5rem);font-weight:1000;line-height:1.04;letter-spacing:-.065em}
-    .home-copy p{display:table;max-width:480px;margin:0;padding:10px 16px;background:var(--paper);border:1px solid var(--ink);border-radius:10px;box-shadow:4px 5px 0 rgba(51,43,39,.15);font-size:clamp(1.1rem,1.8vw,1.7rem);font-weight:850}
-    .home-footnote{margin:20px 0 0;font-size:.76rem;font-weight:750;color:#49372f}
-    .news{min-width:0;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:112px clamp(18px,2.3vw,34px) 38px;background:var(--deep-teal);color:var(--paper);border-left:1px solid var(--ink)}
-    .window-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:25px;padding:8px 10px;background:var(--cream);color:var(--ink);border:1px solid var(--ink);border-radius:8px;box-shadow:3px 4px 0 rgba(0,0,0,.15);font-size:.65rem;font-weight:950;letter-spacing:.1em}
-    .window-controls{display:flex;gap:5px}
-    .window-controls i{width:9px;height:9px;display:block;border:1px solid var(--ink);border-radius:50%;background:var(--orange)}
-    .window-controls i:first-child{background:var(--rose)}
-    .window-controls i:last-child{background:var(--mist)}
-    .news h2{margin:0 0 18px;font-size:clamp(1.8rem,2.8vw,2.8rem);line-height:1.08;letter-spacing:-.045em}
-    .news-intro{margin:-7px 0 15px;color:rgba(255,248,237,.76);font-size:.78rem}
-    .news-list{display:flex;flex-direction:column;gap:12px}
-    .news-card{padding:17px 16px;background:var(--paper);color:var(--ink);border:1px solid rgba(51,43,39,.55);border-radius:12px;box-shadow:4px 5px 0 rgba(0,0,0,.16)}
-    .news-card .tag{display:block;margin-bottom:8px;color:var(--rose);font-size:.64rem;font-weight:1000;letter-spacing:.12em}
-    .news-card h3{margin:0 0 7px;font-size:clamp(1.05rem,1.55vw,1.35rem);line-height:1.25}
-    .news-card p{margin:0;color:var(--muted);font-size:.78rem;line-height:1.6}
-    .news-note{margin:18px 0 0;color:rgba(255,248,237,.7);font-size:.67rem}
-    #latest_event{min-height:100svh;padding:108px 7vw 62px;background:var(--paper);border-top:1px solid var(--ink);overflow:hidden}
-    #latest_event:before{content:"";position:absolute;right:5%;top:9%;width:130px;height:130px;border:1px solid rgba(51,43,39,.14);border-radius:50%;box-shadow:0 0 0 18px rgba(191,154,86,.09),0 0 0 38px rgba(191,154,86,.06);pointer-events:none}
-    .section-shell{position:relative;z-index:1;width:min(1240px,100%);height:100%;margin:0 auto;display:flex;flex-direction:column}
-    .section-heading-row{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;margin-bottom:27px}
-    .section-kicker{display:block;margin-bottom:9px;color:var(--rose);font-size:.7rem;font-weight:1000;letter-spacing:.17em}
-    .section-title{margin:0;color:var(--deep-teal);font-size:clamp(2.4rem,5vw,4.7rem);font-weight:1000;line-height:1.04;letter-spacing:-.06em}
-    .section-link{flex:0 0 auto;padding:10px 15px;background:var(--orange);border:1px solid var(--ink);border-radius:999px;box-shadow:3px 4px 0 rgba(51,43,39,.18);font-size:.82rem;font-weight:900;transition:transform .18s ease,box-shadow .18s ease}
-    .section-link:hover{transform:translate(2px,2px);box-shadow:1px 2px 0 rgba(51,43,39,.18)}
-    .section-description{max-width:600px;margin:12px 0 0;color:var(--muted);font-size:.9rem}
-    .upcoming-events-list{display:flex;flex:1 1 auto;min-height:0;flex-direction:column;gap:14px}
-    .upcoming-event-card{width:100%;min-height:118px;flex:1 1 0;display:grid;grid-template-columns:minmax(150px,23%) minmax(0,1fr) 82px;align-items:stretch;gap:0;padding:0;background:#fffaf2;border:1px solid var(--ink);border-radius:14px;box-shadow:var(--shadow);overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
-    .upcoming-event-card:nth-child(2){background:#fff1df}
-    .upcoming-event-card:nth-child(3){background:#f3e8e3}
-    .upcoming-event-card:hover,.upcoming-event-card:focus-visible{transform:translate(2px,2px);box-shadow:3px 4px 0 rgba(51,43,39,.12)}
-    .upcoming-event-date-block{min-width:0;display:flex;flex-direction:column;justify-content:center;gap:7px;padding:17px 20px;background:rgba(191,154,86,.13);border-right:1px solid var(--line)}
-    .upcoming-event-date-row{display:flex;align-items:center;gap:12px}
-    .upcoming-event-date{font-size:clamp(1.8rem,3.1vw,3.2rem);font-weight:1000;line-height:1;letter-spacing:-.06em;font-variant-numeric:tabular-nums}
-    .upcoming-event-weekday{display:flex;flex-direction:column;align-items:center;padding-left:10px;border-left:1px solid var(--line);font-size:.72rem;font-weight:900;line-height:1.15}
-    .upcoming-event-time{font-size:.78rem;font-weight:850;color:var(--teal)}
-    .upcoming-event-main{min-width:0;display:flex;flex-direction:column;justify-content:center;padding:17px 25px}
-    .upcoming-event-card h3{margin:0;color:var(--deep-teal);font-size:clamp(1.15rem,2vw,1.9rem);font-weight:1000;line-height:1.2;letter-spacing:-.035em}
-    .upcoming-event-meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin-top:9px;color:var(--muted);font-size:.82rem;font-weight:750}
-    .upcoming-event-detail{display:flex;align-items:center;justify-content:center;padding:10px;background:var(--coral);border-left:1px solid var(--ink);font-size:.78rem;font-weight:1000;line-height:1.4;text-align:center}
-    .upcoming-event-detail:after{content:" ↗";display:block}
-    .section-empty{margin:0;padding:28px;background:var(--cream);border:1px dashed var(--sand);border-radius:12px;color:var(--muted)}
-    .site-footer{padding:28px 24px 38px;background:var(--cream);border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.75rem}
-    .site-footer p{margin:4px 0}
-    .site-footer strong{color:var(--ink)}
-    @media(max-width:900px){
-      #mainpage{grid-template-columns:minmax(0,2fr) minmax(260px,1fr)}
-      .home{padding-left:4vw;padding-right:4vw}
-      .home-copy h1{font-size:clamp(2.6rem,6vw,4.6rem)}
-      .news{padding-left:18px;padding-right:18px}
-      #latest_event{padding-left:5vw;padding-right:5vw}
-      .upcoming-event-card{grid-template-columns:minmax(130px,24%) minmax(0,1fr) 68px}
-      .upcoming-event-main{padding:16px}
-    }
-    @media(max-width:700px){
-      .site-header{top:8px;left:3%;width:94%;height:auto;min-height:62px}
-      .navbar{grid-template-columns:1fr;gap:7px;padding:10px 13px}
-      .brand{justify-self:center}
-      .brand-mark{width:28px;height:28px;font-size:15px}
-      .brand-word{font-size:.92rem}
-      .brand-word small{font-size:.52rem}
-      .nav-spacer{display:none}
-      .site-nav{justify-content:center;flex-wrap:wrap;gap:3px}
-      .site-nav a{padding:6px 9px;font-size:.72rem}
-      #mainpage{grid-template-columns:1fr;min-height:auto;padding-top:0}
-      .home{min-height:76svh;padding:0 24px 48px}
-      .home:before{width:85vw;right:-24%;top:18%}
-      .home:after{top:22%;right:7%;font-size:.58rem}
-      .home-copy{padding-top:145px}
-      .home-copy h1{font-size:clamp(2.7rem,11vw,4.6rem)}
-      .home-copy p{font-size:1.1rem}
-      .news{min-height:auto;padding:30px 22px 34px;border-left:0;border-top:1px solid var(--ink)}
-      .window-bar{margin-bottom:18px}
-      .news h2{font-size:2rem}
-      .news-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
-      .news-card{padding:14px}
-      #latest_event{min-height:0;padding:82px 20px 45px;overflow:visible}
-      #latest_event:before{width:80px;height:80px;right:6%;top:5%}
-      .section-heading-row{align-items:flex-start;flex-direction:column;gap:16px;margin-bottom:22px}
-      .section-title{font-size:clamp(2.4rem,10vw,3.7rem)}
-      .section-description{font-size:.82rem}
-      .upcoming-events-list{gap:14px}
-      .upcoming-event-card{grid-template-columns:105px minmax(0,1fr);min-height:0;flex:0 0 auto}
-      .upcoming-event-date-block{padding:15px 11px}
-      .upcoming-event-date-row{gap:7px}
-      .upcoming-event-date{font-size:1.7rem}
-      .upcoming-event-weekday{padding-left:6px;font-size:.65rem}
-      .upcoming-event-main{padding:16px 13px}
-      .upcoming-event-card h3{font-size:1.05rem}
-      .upcoming-event-meta{font-size:.72rem;gap:4px 8px}
-      .upcoming-event-detail{grid-column:1/-1;padding:8px;border-top:1px solid var(--ink);border-left:0;font-size:.72rem}
-      .upcoming-event-detail:after{content:""}
-      .site-footer{padding-bottom:30px}
-    }
-    @media(max-width:390px){
-      .site-nav a{padding:6px 7px;font-size:.67rem}
-      .news-list{grid-template-columns:1fr}
-      .home{min-height:72svh}
-      .upcoming-event-card{grid-template-columns:92px minmax(0,1fr)}
-      .upcoming-event-date{font-size:1.45rem}
-    }
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
-  </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
@@ -154,10 +17,10 @@
       </a>
       <div class="nav-spacer" aria-hidden="true"></div>
       <div class="site-nav">
-        <a href="#mainpage">首頁</a>
-        <a href="#news">最近大事</a>
-        <a href="#latest_event">近期演出</a>
-        <a class="login" href="#management-note">管理登入</a>
+        <a href="last-event.html">近期演出一覽</a>
+        <a href="portfolio.html">歌曲作品一覽</a>
+        <a href="year-recap.html">年度回顧</a>
+        <button class="login" id="login-open" type="button" aria-haspopup="dialog" aria-controls="login-dialog">登入</button>
       </div>
     </nav>
   </header>
@@ -243,11 +106,29 @@
     </section>
   </main>
 
+<dialog class="login-dialog" id="login-dialog" aria-labelledby="login-dialog-title">
+    <div class="login-dialog-inner">
+      <div class="window-bar"><span>ADMIN_LOGIN.exe</span><span class="window-controls" aria-hidden="true"><i></i><i></i><i></i></span></div>
+      <h2 id="login-dialog-title">管理登入</h2>
+      <p>登入將以彈窗方式呈現；未來驗證成功後再進入後台管理頁面，不另設獨立登入頁。</p>
+      <p>目前尚未連接帳號驗證與後台權限。此彈窗僅為介面預覽，不會收集或提交帳號資料。</p>
+      <div class="login-dialog-actions"><form method="dialog"><button class="close-button" type="submit">關閉</button></form></div>
+    </div>
+  </dialog>
+
   <footer class="site-footer" id="management-note">
     <p><strong>GGteens Fan-made Archive</strong></p>
     <p>本頁面僅用於分享粉絲記錄之公館青少年演出記錄與歌曲作品。</p>
     <p>所有活動安排及作品資料均以樂團及活動主辦方公開資訊為準。</p>
-    <p>本網站為非官方粉絲製作；「管理登入」目前僅為介面預留入口，尚未連接驗證或發布功能。</p>
+    <p>本網站為非官方粉絲製作；「登入」目前以彈窗呈現，尚未連接帳號驗證、權限控管或後台發布功能。</p>
   </footer>
+  <script>
+    const loginOpen = document.getElementById("login-open");
+    const loginDialog = document.getElementById("login-dialog");
+    loginOpen.addEventListener("click", () => loginDialog.showModal());
+    loginDialog.addEventListener("click", (event) => {
+      if (event.target === loginDialog) loginDialog.close();
+    });
+  </script>
 </body>
 </html>
