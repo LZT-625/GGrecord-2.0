@@ -1,21 +1,34 @@
 <!doctype html>
+<!-- 設定頁面語言，供瀏覽器與輔助工具辨識。 -->
 <html lang="zh-Hant">
+<!-- 頁面中繼資料、標題與樣式資源。 -->
 <head>
+  <!-- 指定文件編碼，避免繁體中文亂碼。 -->
   <meta charset="utf-8">
+  <!-- 讓版面依裝置視窗寬度正確縮放。 -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 設定支援此功能的瀏覽器工具列主題色。 -->
   <meta name="theme-color" content="#F2DCC2">
+  <!-- 提供搜尋結果與分享預覽可使用的頁面摘要。 -->
   <meta name="description" content="GGteens 粉絲製作的樂團演出與作品紀錄。非官方網站。">
+  <!-- 設定瀏覽器分頁標題。 -->
   <title>跟館青出去走一走｜GGteens 粉絲紀錄</title>
+    <!-- 載入全站共用樣式表。 -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+<!-- 頁面可見內容由此開始。 -->
 <body>
+  <!-- 頁面中繼資料、標題與樣式資源。 -->
   <header class="site-header">
+    <!-- 主要頁面導覽；Logo 負責返回首頁。 -->
     <nav class="navbar" aria-label="主要導覽">
+      <!-- 品牌 Logo 與首頁連結。 -->
       <a class="brand" href="index.html#mainpage" aria-label="回到首頁">
         <span class="brand-mark" aria-hidden="true">G</span>
         <span class="brand-word">GGTEENS<small>FAN-MADE ARCHIVE</small></span>
       </a>
       <div class="nav-spacer" aria-hidden="true"></div>
+      <!-- 各內容頁入口與固定的登入按鈕。 -->
       <div class="site-nav">
         
         <a href="page/last-event.html">演出一覽</a>
@@ -26,28 +39,38 @@
     </nav>
   </header>
 
+  <!-- 頁面主要內容區。 -->
   <main>
+    <!-- 首頁主視覺與最近大事的雙欄區域。 -->
     <section id="mainpage" aria-label="首頁主視覺與最近大事">
+      <!-- 首頁主視覺背景與主標題內容。 -->
       <div class="home">
+        <!-- 首頁標題、標語與非官方聲明。 -->
         <div class="home-copy">
           <span class="window-label">跟館青出去走一走 / GGTEENS ARCHIVE</span>
+          <!-- 頁面主要標題，搭配對應區塊的樣式設定。 -->
           <h1>跟館青<br>出去走一走</h1>
           <p>今天又要走去哪呢？</p>
           <div class="home-footnote">粉絲製作・非官方網站・持續整理中</div>
         </div>
       </div>
 
+      <!-- 最近大事資訊側欄。 -->
       <aside class="news" id="news" aria-labelledby="recent-news-title">
         <div class="window-bar"><span>RECENT_NOTES.exe</span><span class="window-controls" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <!-- 頁面主要標題，搭配對應區塊的樣式設定。 -->
         <h2 id="recent-news-title">最近大事</h2>
         <p class="news-intro">近期公告與值得留下的片刻。</p>
+        <!-- 最近大事卡片清單。 -->
         <div class="news-list">
+          <!-- 單筆最近大事內容與相關頁面連結。 -->
           <article class="news-card">
             <span class="tag">RELEASE / 2026.09.16</span>
             <h3>《相似形》</h3>
             <p>歌曲資料庫標記為合作歌曲，串流連結欄位目前未填。</p>
             <p><a class="source-link" href="page/portfolio.html">查看歌曲作品 ↗</a></p>
           </article>
+          <!-- 單筆最近大事內容與相關頁面連結。 -->
           <article class="news-card">
             <span class="tag">ARCHIVE / UPCOMING</span>
             <h3>潮派鹿港 Lukang Music Festival</h3>
@@ -59,18 +82,23 @@
       </aside>
     </section>
 
+    <!-- 首頁即將到來的演出區。 -->
     <section id="latest_event" aria-labelledby="upcoming-title">
       <div class="section-shell latest-event-shell">
+        <!-- 演出區標題、說明與完整列表入口。 -->
         <div class="section-heading-row latest-event-heading">
           <div>
             <span class="section-kicker">02 / ON THE CALENDAR</span>
+            <!-- 頁面主要標題，搭配對應區塊的樣式設定。 -->
             <h2 class="section-title" id="upcoming-title">即將到來的演出</h2>
             <p class="section-description">從 Notion 演出資料庫選取近期項目，供首頁卡片的真實內容與長短標題顯示測試。</p>
           </div>
           <a class="section-link" href="page/last-event.html">查看完整演出一覽 ↗</a>
         </div>
 
+        <!-- 首頁演出卡片清單，卡片資料由 data-details 提供。 -->
         <div id="upcoming-events" class="upcoming-events-list">
+          <!-- 單筆演出卡片；data-details 保存彈窗使用的欄位資料。 -->
           <article class="upcoming-event-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="查看演出活動詳細資料：2026 潮派鹿港 Lukang Music Festival" data-details="[[&quot;演出時間&quot;,&quot;2026-10-17&quot;],[&quot;演出活動名稱&quot;,&quot;2026 潮派鹿港 Lukang Music Festival&quot;],[&quot;活動類型&quot;,&quot;音樂祭/節&quot;],[&quot;活動所在城市&quot;,&quot;中部 | 彰化&quot;],[&quot;活動詳細地點&quot;,&quot;區域：中部；地點名稱：彰化 • 鹿港 \\| 鹿港體育場；地點類型：戶外開放空間；城市：彰化&quot;],[&quot;資訊來源&quot;,&quot;https://www.instagram.com/p/DauAd0rEd6t/?img_index=2&quot;]]">
             <div class="upcoming-event-date-block">
               <div class="upcoming-event-date-row"><span class="upcoming-event-date">10.17</span><span class="upcoming-event-weekday"><span>週</span><span>六</span></span></div>
@@ -82,6 +110,7 @@
             </div>
             <span class="upcoming-event-detail detail-hint">點擊查看詳細資料 ↗</span>
           </article>
+          <!-- 單筆演出卡片；data-details 保存彈窗使用的欄位資料。 -->
           <article class="upcoming-event-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="查看演出活動詳細資料：2026 GIMA LIVE 金音獎" data-details="[[&quot;演出時間&quot;,&quot;2026-10-21 10:30:00Z ～ 2026-10-21 11:00:00Z&quot;],[&quot;演出活動名稱&quot;,&quot;2026 GIMA LIVE 金音獎&quot;],[&quot;活動類型&quot;,&quot;商演&quot;],[&quot;活動詳細地點&quot;,&quot;地點名稱：台北 • 大安 \\| Corner MAX&quot;]]">
             <div class="upcoming-event-date-block">
               <div class="upcoming-event-date-row"><span class="upcoming-event-date">10.21</span><span class="upcoming-event-weekday"><span>週</span><span>三</span></span></div>
@@ -93,6 +122,7 @@
             </div>
             <span class="upcoming-event-detail detail-hint">點擊查看詳細資料 ↗</span>
           </article>
+          <!-- 單筆演出卡片；data-details 保存彈窗使用的欄位資料。 -->
           <article class="upcoming-event-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="查看演出活動詳細資料：2026 浪人祭 Vegabond Fest." data-details="[[&quot;演出時間&quot;,&quot;2026-11-07&quot;],[&quot;演出活動名稱&quot;,&quot;2026 浪人祭 Vegabond Fest.&quot;],[&quot;活動類型&quot;,&quot;週&quot;],[&quot;活動所在城市&quot;,&quot;六&quot;]]">
             <div class="upcoming-event-date-block">
               <div class="upcoming-event-date-row"><span class="upcoming-event-date">11.07</span><span class="upcoming-event-weekday"><span>週</span><span>六</span></span></div>
@@ -107,33 +137,46 @@
         </div>
       </div>
     </section>
+  <!-- 主要內容區結束。 -->
   </main>
 
 
+  <!-- 演出與歌曲共用的詳細資料彈窗。 -->
   <dialog class="detail-dialog" id="detail-dialog" aria-labelledby="detail-dialog-title">
     <section class="detail-window">
+      <!-- 頁面中繼資料、標題與樣式資源。 -->
       <header class="detail-titlebar"><span class="detail-window-icon" aria-hidden="true">▣</span><span class="detail-titlebar-text" id="detail-dialog-title">DETAIL_VIEW.exe</span><button type="button" class="detail-close" aria-label="關閉詳細資料" title="關閉">×</button></header>
+      <!-- 彈窗動態插入資料欄位的容器。 -->
       <div class="detail-content"><div class="detail-property-list" id="detail-property-list"></div></div>
+      <!-- 詳細資料彈窗底部狀態列。 -->
       <footer class="detail-statusbar"><span>GGteens Fan-made Archive</span><span>DETAILS</span></footer>
     </section>
   </dialog>
 
+  <!-- 管理登入介面原型；目前尚未接入實際驗證。 -->
   <dialog class="login-dialog" id="login-dialog" aria-labelledby="login-dialog-title">
+    <!-- 登入彈窗內容容器。 -->
     <div class="login-dialog-inner">
       <div class="window-bar"><span>ADMIN_LOGIN.exe</span><span class="window-controls" aria-hidden="true"><i></i><i></i><i></i></span></div>
+      <!-- 頁面主要標題，搭配對應區塊的樣式設定。 -->
       <h2 id="login-dialog-title">管理登入</h2>
       <p>登入將以彈窗方式呈現；未來驗證成功後再進入後台管理頁面，不另設獨立登入頁。</p>
       <p>目前尚未連接帳號驗證與後台權限。此彈窗僅為介面預覽，不會收集或提交帳號資料。</p>
+      <!-- 登入彈窗操作按鈕區。 -->
       <div class="login-dialog-actions"><form method="dialog"><button class="close-button" type="submit">關閉</button></form></div>
     </div>
   </dialog>
 
+  <!-- 頁尾聲明與網站用途說明。 -->
   <footer class="site-footer" id="management-note">
     <p><strong>GGteens Fan-made Archive</strong></p>
     <p>本頁面僅用於分享粉絲記錄之公館青少年演出記錄與歌曲作品。</p>
     <p>所有活動安排及作品資料均以樂團及活動主辦方公開資訊為準。</p>
     <p>本網站為非官方粉絲製作；「登入」目前以彈窗呈現，尚未連接帳號驗證、權限控管或後台發布功能。</p>
   </footer>
+  <!-- 載入共用互動程式；defer 讓 HTML 解析後再執行。 -->
   <script src="js/main.js" defer></script>
+<!-- 可見頁面內容結束。 -->
 </body>
+<!-- HTML 文件結束。 -->
 </html>
