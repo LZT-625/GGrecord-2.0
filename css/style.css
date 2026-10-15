@@ -7,44 +7,64 @@
     }
     /* 統一元素盒模型，讓尺寸計算更可預期。 */
     *{box-sizing:border-box}
+
     /* 設定平滑捲動與固定導覽列的捲動留白。 */
     html{scroll-behavior:smooth;scroll-padding-top:88px}
+
     /* 設定頁面預設字型、文字色、背景與行高。 */
     body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.6}
+
     /* 連結繼承文字顏色並移除預設底線。 */
     a{color:inherit;text-decoration:none}
+
     /* 讓按鈕沿用網站文字字型。 */
     button{font:inherit}
+
     /* 避免圖片超出容器寬度。 */
     img{display:block;max-width:100%}
+
     /* 避免標題與段落中的長文字撐破版面。 */
     h1,h2,h3,p{overflow-wrap:anywhere}
+
     /* 提供鍵盤操作時可辨識的焦點外框。 */
     :focus-visible{outline:3px solid var(--deep-teal);outline-offset:4px}
+
     /* 固定頁首外觀、位置、層級與玻璃感背景。 */
     .site-header{position:fixed;z-index:50;top:12px;left:2.5%;width:95%;height:68px;background:rgba(255,248,237,.94);border:1px solid var(--line);border-radius:17px;box-shadow:4px 5px 0 rgba(51,43,39,.12);backdrop-filter:blur(12px)}
+
     /* 排列 Logo、彈性留白與導覽項目。 */
     .navbar{height:100%;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:24px;padding:0 22px}
+
     /* 品牌標誌與文字的排列方式。 */
     .brand{display:flex;align-items:center;gap:10px;white-space:nowrap}
+
     /* 品牌標誌與文字的排列方式。 */
     .brand-mark{width:36px;height:36px;display:grid;place-items:center;background:var(--rose);border:1px solid var(--ink);border-radius:11px;box-shadow:2px 3px 0 var(--ink);font-size:19px;font-weight:1000;color:var(--paper);transform:rotate(-4deg)}
+
     /* 品牌標誌與文字的排列方式。 */
     .brand-word{font-size:1.08rem;line-height:1.05;font-weight:1000;letter-spacing:.045em}
+
     /* 品牌標誌與文字的排列方式。 */
     .brand-word small{display:block;margin-top:4px;color:var(--muted);font-size:.58rem;letter-spacing:.12em;font-weight:800}
+
     /* 導覽列中間的彈性佔位。 */
     .nav-spacer{min-width:0}
+
     /* 導覽項目的排列、間距與互動狀態。 */
     .site-nav{display:flex;align-items:center;justify-content:flex-end;gap:8px}
+
     /* 導覽項目的排列、間距與互動狀態。 */
     .site-nav a{padding:8px 13px;border:1px solid transparent;border-radius:999px;font-size:.84rem;font-weight:800;white-space:nowrap;transition:background .18s ease,transform .18s ease,border-color .18s ease}
+
     /* 導覽項目的排列、間距與互動狀態。 */
     .site-nav a:hover{background:var(--orange);border-color:var(--ink);transform:translateY(-1px)}
+
     /* 導覽項目的排列、間距與互動狀態。 */
     .site-nav .login{padding:8px 13px;border:1px solid var(--ink);border-radius:999px;background:var(--deep-teal);color:var(--paper);font-size:.84rem;font-weight:800;white-space:nowrap;cursor:pointer;transition:background .18s ease,transform .18s ease}
+
     /* 導覽項目的排列、間距與互動狀態。 */
     .site-nav .login:hover{background:var(--teal);transform:translateY(-1px)}
+
     /* 導覽項目的排列、間距與互動狀態。 */
     .site-nav a.login:hover{background:var(--teal)}
     /* 設定主要區段的定位基準。 */
@@ -52,17 +72,24 @@
     /* 首頁主視覺與最近大事的欄位比例。 */
     #mainpage{min-height:100svh;display:grid;grid-template-columns:minmax(0,3fr) minmax(280px,1fr);overflow:hidden;padding-top:0;background:var(--mist)}
     /* 首頁主視覺的尺寸、背景與內容定位。 */
-    .home{position:relative;isolation:isolate;min-width:0;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;padding:0 5vw 8vh;background:linear-gradient(130deg,rgba(242,166,99,.2),rgba(217,105,106,.12)),radial-gradient(ellipse at 75% 22%,rgba(255,248,237,.65) 0 9%,transparent 9.5%),linear-gradient(145deg,#F28651 0%,#D9696A 100%)}
+    .home{
+    position: relative;
+    isolation: isolate;
+    min-width: 0;
+    min-height: 100svh;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: 0 5vw 8vh;
+    background-position: 50% 22%,rgba(255,248,237,.65) 0 9%,transparent 9.5% ),linear-gradient( 145deg,#F28651 0%,#D9696A 100% );
+    background-image: url(../asset/img/banner/ONLYTEST_Main_BG.jpg);
+}
     /* 首頁主視覺的尺寸、背景與內容定位。 */
     .home:before{content:"";position:absolute;z-index:-1;width:min(60vw,680px);aspect-ratio:1;right:-8%;top:10%;border:1px solid rgba(51,43,39,.28);border-radius:50%;box-shadow:0 0 0 24px rgba(255,248,237,.12),0 0 0 52px rgba(255,248,237,.09),0 0 0 82px rgba(51,43,39,.045)}
     /* 首頁主視覺的尺寸、背景與內容定位。 */
     .home:after{content:"GG / FAN ARCHIVE";position:absolute;right:5%;top:18%;padding:10px 14px;background:var(--paper);border:1px solid var(--ink);border-radius:9px;box-shadow:4px 5px 0 rgba(51,43,39,.16);font-size:.7rem;font-weight:1000;letter-spacing:.14em;transform:rotate(5deg)}
     /* 首頁主視覺的尺寸、背景與內容定位。 */
     .home-copy{width:100%;max-width:900px;position:relative;z-index:1}
-    /* 主視覺上的復古視窗標籤。 */
-    .window-label{display:inline-flex;align-items:center;gap:8px;margin-bottom:18px;padding:7px 11px;background:rgba(255,248,237,.8);border:1px solid var(--ink);border-radius:8px;box-shadow:3px 3px 0 rgba(51,43,39,.12);font-size:.72rem;font-weight:900;letter-spacing:.1em}
-    /* 主視覺上的復古視窗標籤。 */
-    .window-label:before{content:"";width:8px;height:8px;background:var(--rose);border:1px solid var(--ink);border-radius:50%}
     /* 首頁主視覺的尺寸、背景與內容定位。 */
     .home-copy h1{max-width:850px;margin:0 0 16px;font-size:clamp(2.7rem,6.1vw,6.5rem);font-weight:1000;line-height:1.04;letter-spacing:-.065em}
     /* 首頁主視覺的尺寸、背景與內容定位。 */
@@ -460,4 +487,3 @@ body:has(.login-dialog[open]) { overflow:hidden; }
     /* 管理登入彈窗的尺寸、遮罩與操作按鈕樣式。 */
 .login-dialog button.close-button{background:var(--orange);color:var(--ink)}
 /* 深青色僅用於復古視窗標題列等小面積裝飾，不用於內文與大標題 */
-
