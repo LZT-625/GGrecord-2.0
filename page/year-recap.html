@@ -1,11 +1,19 @@
 <!doctype html>
+<!-- 設定頁面語言，供瀏覽器與輔助工具辨識。 -->
 <html lang="zh-Hant">
+<!-- 頁面中繼資料、標題與樣式資源。 -->
 <head>
+  <!-- 指定文件編碼，避免繁體中文亂碼。 -->
   <meta charset="utf-8">
+  <!-- 讓版面依裝置視窗寬度正確縮放。 -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 設定支援此功能的瀏覽器工具列主題色。 -->
   <meta name="theme-color" content="#F2DCC2">
+  <!-- 設定瀏覽器分頁標題。 -->
   <title>年度回顧｜GGteens</title>
+  <!-- 以下為本頁專屬樣式；後續規則可能覆蓋共用 CSS。 -->
   <style>
+    /* 定義全站色彩、圓角與陰影等共用變數。 */
     :root {
       color-scheme: light;
       --cream: #F2DCC2;
@@ -13,7 +21,9 @@
       --coral: #F28651;
       --ink: #29201C;
     }
+    /* 統一元素盒模型，讓尺寸計算更可預期。 */
     * { box-sizing: border-box; }
+    /* 設定此選擇器對應元素的版面、外觀或互動狀態。 */
     body {
       min-height: 100vh;
       margin: 0;
@@ -24,6 +34,7 @@
       color: var(--ink);
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Noto Sans TC", sans-serif;
     }
+    /* 設定此選擇器對應元素的版面、外觀或互動狀態。 */
     main {
       width: min(100%, 640px);
       padding: clamp(32px, 8vw, 72px) 24px;
@@ -33,12 +44,14 @@
       border-radius: 24px;
       box-shadow: 8px 8px 0 rgba(191, 154, 86, .22);
     }
+    /* 設定此選擇器對應元素的版面、外觀或互動狀態。 */
     p {
       margin: 0;
       font-size: clamp(1.8rem, 6vw, 3rem);
       font-weight: 800;
       letter-spacing: .08em;
     }
+    /* 設定此選擇器對應元素的版面、外觀或互動狀態。 */
     .accent {
       width: 64px;
       height: 6px;
@@ -47,35 +60,57 @@
       background: var(--coral);
     }
   </style>
+  <!-- 載入全站共用樣式表。 -->
   <link rel="stylesheet" href="../css/style.css">
+  <!-- 以下為本頁專屬樣式；後續規則可能覆蓋共用 CSS。 -->
   <style>
+    /* 設定頁面預設字型、文字色、背景與行高。 */
     body{display:block;padding:0;background:var(--cream);font-family:Inter,"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.6}
+    /* 年度回顧建置中佔位畫面的排版。 */
     .year-placeholder{min-height:100vh;display:grid;place-items:center;padding:110px 24px 48px}
+    /* 年度回顧建置中佔位畫面的排版。 */
     .year-placeholder main{width:min(100%,640px);padding:clamp(32px,8vw,72px) 24px;text-align:center;background:rgba(255,250,242,.82);border:2px solid var(--sand);border-radius:24px;box-shadow:8px 8px 0 rgba(191,154,86,.22)}
+    /* 年度回顧建置中佔位畫面的排版。 */
     .year-placeholder p{margin:0;font-size:clamp(1.8rem,6vw,3rem);font-weight:800;letter-spacing:.08em}
+    /* 年度回顧建置中佔位畫面的排版。 */
     .year-placeholder .accent{width:64px;height:6px;margin:24px auto 0;border-radius:999px;background:var(--coral)}
+    /* 依螢幕尺寸或使用者偏好調整版面與動態效果。 */
     @media(max-width:700px){.year-placeholder{padding-top:150px}}
   </style>
 </head>
+<!-- 頁面可見內容由此開始。 -->
 <body>
+  <!-- 頁面中繼資料、標題與樣式資源。 -->
   <header class="site-header">
+    <!-- 主要頁面導覽；Logo 負責返回首頁。 -->
     <nav class="navbar" aria-label="主要導覽">
+      <!-- 品牌 Logo 與首頁連結。 -->
       <a class="brand" href="../index.html" aria-label="回到首頁"><span class="brand-mark" aria-hidden="true">G</span><span class="brand-word">GGTEENS<small>FAN-MADE ARCHIVE</small></span></a>
       <div class="nav-spacer" aria-hidden="true"></div>
+      <!-- 各內容頁入口與固定的登入按鈕。 -->
       <div class="site-nav"><a href="last-event.html">演出一覽</a><a href="portfolio.html">歌曲作品</a><a href="year-recap.html" aria-current="page">年度回顧</a><button class="login" id="login-open" type="button" aria-haspopup="dialog" aria-controls="login-dialog">登入</button></div>
     </nav>
   </header>
+  <!-- 年度回顧目前的建置中佔位畫面。 -->
   <div class="year-placeholder"><main><p>頁面建置中</p><div class="accent" aria-hidden="true"></div></main></div>
+  <!-- 管理登入介面原型；目前尚未接入實際驗證。 -->
   <dialog class="login-dialog" id="login-dialog" aria-labelledby="login-dialog-title">
+    <!-- 登入彈窗內容容器。 -->
     <div class="login-dialog-inner">
       <div class="window-bar"><span>ADMIN_LOGIN.exe</span><span class="window-controls" aria-hidden="true"><i></i><i></i><i></i></span></div>
+      <!-- 頁面主要標題，搭配對應區塊的樣式設定。 -->
       <h2 id="login-dialog-title">管理登入</h2>
       <p>登入將以彈窗方式呈現；未來驗證成功後再進入後台管理頁面，不另設獨立登入頁。</p>
       <p>目前尚未連接帳號驗證與後台權限。此彈窗僅為介面預覽，不會收集或提交帳號資料。</p>
+      <!-- 登入彈窗操作按鈕區。 -->
       <div class="login-dialog-actions"><form method="dialog"><button class="close-button" type="submit">關閉</button></form></div>
     </div>
   </dialog>
+  <!-- 頁尾聲明與網站用途說明。 -->
   <footer class="site-footer"><p><strong>GGteens Fan-made Archive</strong></p><p>粉絲製作・非官方網站；資料僅供介面與內容顯示測試。</p></footer>
+  <!-- 載入共用互動程式；defer 讓 HTML 解析後再執行。 -->
   <script src="../js/main.js" defer></script>
+<!-- 可見頁面內容結束。 -->
 </body>
+<!-- HTML 文件結束。 -->
 </html>
