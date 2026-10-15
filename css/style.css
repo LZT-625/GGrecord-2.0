@@ -400,6 +400,19 @@ body:has(.login-dialog[open]) { overflow:hidden; }
     box-shadow: 0 10px 20px rgba(51,43,39,.1), 1px 2px 0 rgba(51,43,39,.10), inset 0 1px 0 rgba(255,255,255,.5);
   }
 }
+/* 桌面版最新消息：以完整復古視窗外框呈現，內容保持靜態。 */
+@media (min-width:701px){
+  .news{
+    min-height:calc(100svh - 32px);
+    margin:16px 16px 16px 0;
+    padding-top:28px;
+    padding-bottom:24px;
+    border:1px solid var(--ink);
+    border-radius:14px;
+    box-shadow:6px 7px 0 rgba(41,32,28,.14);
+  }
+}
+
 /* 2026 公開端配色校正：六色規範；深青色僅保留少量復古裝飾 */
 
     /* 定義全站色彩、圓角與陰影等共用變數。 */
