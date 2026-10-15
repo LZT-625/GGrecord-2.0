@@ -59,21 +59,19 @@
         <!-- 頁面主要標題，搭配對應區塊的樣式設定。 -->
         <h2 id="recent-news-title">最新消息</h2>
         <p class="news-intro">副標題佔位</p>
-        <!-- 最近大事卡片清單。 -->
+        <!-- 最新消息固定顯示一則重大資訊與一則最新發行作品。 -->
         <div class="news-list">
-          <!-- 單筆最近大事內容與相關頁面連結。 -->
           <article class="news-card">
-            <span class="tag">RELEASE / 2026.09.16</span>
-            <h3>《相似形》</h3>
-            <p>歌曲資料庫標記為合作歌曲，串流連結欄位目前未填。</p>
-            <p><a class="source-link" href="page/portfolio.html">查看歌曲作品 ↗</a></p>
-          </article>
-          <!-- 單筆最近大事內容與相關頁面連結。 -->
-          <article class="news-card">
-            <span class="tag">ARCHIVE / UPCOMING</span>
+            <span class="tag">LATEST NEWS / 2026.10</span>
             <h3>潮派鹿港 Lukang Music Festival</h3>
-            <p>10 月 17 日 · 彰化。演出紀錄中的活動類型為音樂祭／節。</p>
+            <p>10 月 17 日・彰化鹿港。</p>
             <p><a class="source-link" href="page/last-event.html">查看演出詳情 ↗</a></p>
+          </article>
+          <article class="news-card">
+            <span class="tag">LATEST RELEASE / 2026.09.16</span>
+            <h3>《相似形》</h3>
+            <p>最新整理的歌曲發行紀錄。</p>
+            <p><a class="source-link" href="page/portfolio.html">查看歌曲作品 ↗</a></p>
           </article>
         </div>
       </aside>
@@ -92,45 +90,37 @@
           <a class="section-link" href="page/last-event.html">查看完整演出一覽 ↗</a>
         </div>
 
-        <!-- 首頁演出卡片清單，卡片資料由 data-details 提供。 -->
+        <!-- 首頁演出卡片清單，沿用演出一覽頁面的卡片風格。 -->
         <div id="upcoming-events" class="upcoming-events-list">
-          <!-- 單筆演出卡片；data-details 保存彈窗使用的欄位資料。 -->
-          <article class="upcoming-event-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="查看演出活動詳細資料：2026 潮派鹿港 Lukang Music Festival" data-details="[[&quot;演出時間&quot;,&quot;2026-10-17&quot;],[&quot;演出活動名稱&quot;,&quot;2026 潮派鹿港 Lukang Music Festival&quot;],[&quot;活動類型&quot;,&quot;音樂祭/節&quot;],[&quot;活動所在城市&quot;,&quot;中部 | 彰化&quot;],[&quot;活動詳細地點&quot;,&quot;區域：中部；地點名稱：彰化 • 鹿港 \\| 鹿港體育場；地點類型：戶外開放空間；城市：彰化&quot;],[&quot;資訊來源&quot;,&quot;https://www.instagram.com/p/DauAd0rEd6t/?img_index=2&quot;]]">
+          <article class="upcoming-event-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="查看演出活動詳細資料：2026 潮派鹿港 Lukang Music Festival" data-details="[[&quot;演出時間&quot;,&quot;2026-10-17&quot;],[&quot;演出活動名稱&quot;,&quot;2026 潮派鹿港 Lukang Music Festival&quot;],[&quot;活動類型&quot;,&quot;音樂祭／節&quot;],[&quot;活動所在城市&quot;,&quot;中部｜彰化&quot;],[&quot;活動詳細地點&quot;,&quot;彰化・鹿港｜鹿港體育場（待核對）&quot;],[&quot;資訊來源&quot;,&quot;https://www.instagram.com/p/DauAd0rEd6t/?img_index=2&quot;]]">
             <div class="upcoming-event-date-block">
-              <span class="upcoming-event-time">2026 / OCT</span>
-			  <div class="upcoming-event-date-row"><span class="upcoming-event-date">10.17</span>
-			  <span class="upcoming-event-weekday"><span>週</span><span>六</span></span></div>
-              
+              <div class="upcoming-event-date-row"><span class="upcoming-event-date">10.17</span><span class="upcoming-event-weekday">星期六</span></div>
             </div>
             <div class="upcoming-event-main">
-              <h3>2026 潮派鹿港 Lukang Music Festival</h3>
-              <div class="upcoming-event-meta"><span>音樂祭／節</span><span>·</span><span>彰化</span></div>
+              <h3>潮派鹿港 Lukang Music Festival</h3>
+              <div class="upcoming-event-meta"><span>音樂祭／節</span><span aria-hidden="true">｜</span><span>彰化</span></div>
             </div>
             <span class="upcoming-event-detail detail-hint">詳細資訊</span>
           </article>
-          <!-- 單筆演出卡片；data-details 保存彈窗使用的欄位資料。 -->
-          <article class="upcoming-event-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="查看演出活動詳細資料：2026 GIMA LIVE 金音獎" data-details="[[&quot;演出時間&quot;,&quot;2026-10-21 10:30:00Z ～ 2026-10-21 11:00:00Z&quot;],[&quot;演出活動名稱&quot;,&quot;2026 GIMA LIVE 金音獎&quot;],[&quot;活動類型&quot;,&quot;商演&quot;],[&quot;活動詳細地點&quot;,&quot;地點名稱：台北 • 大安 \\| Corner MAX&quot;]]">
+
+          <article class="upcoming-event-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="查看演出活動詳細資料：2026 GIMA LIVE 金音獎" data-details="[[&quot;演出時間&quot;,&quot;2026-10-21 10:30:00Z ～ 2026-10-21 11:00:00Z&quot;],[&quot;演出活動名稱&quot;,&quot;2026 GIMA LIVE 金音獎&quot;],[&quot;活動類型&quot;,&quot;商演&quot;],[&quot;活動所在城市&quot;,&quot;台北市大安區&quot;],[&quot;活動詳細地點&quot;,&quot;Corner MAX（詳細地址待核對）&quot;]]">
             <div class="upcoming-event-date-block">
-              <span class="upcoming-event-time">2026</span>
-			  <div class="upcoming-event-date-row"><span class="upcoming-event-date">10.21</span><span class="upcoming-event-weekday"><span>週</span><span>三</span></span></div>
-              
+              <div class="upcoming-event-date-row"><span class="upcoming-event-date">10.21</span><span class="upcoming-event-weekday">星期三</span></div>
             </div>
             <div class="upcoming-event-main">
-              <h3>2026 GIMA LIVE 金音獎</h3>
-              <div class="upcoming-event-meta"><span>商演</span><span>·</span><span>城市待補</span></div>
+              <h3>GIMA LIVE 金音獎</h3>
+              <div class="upcoming-event-meta"><span>商演</span><span aria-hidden="true">｜</span><span>台北</span></div>
             </div>
             <span class="upcoming-event-detail detail-hint">詳細資訊</span>
           </article>
-          <!-- 單筆演出卡片；data-details 保存彈窗使用的欄位資料。 -->
-          <article class="upcoming-event-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="查看演出活動詳細資料：2026 浪人祭 Vegabond Fest." data-details="[[&quot;演出時間&quot;,&quot;2026-11-07&quot;],[&quot;演出活動名稱&quot;,&quot;2026 浪人祭 Vegabond Fest.&quot;],[&quot;活動類型&quot;,&quot;週&quot;],[&quot;活動所在城市&quot;,&quot;六&quot;]]">
+
+          <article class="upcoming-event-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="查看演出活動詳細資料：2026 浪人祭 Vegabond Fest." data-details="[[&quot;演出時間&quot;,&quot;2026-11-07&quot;],[&quot;演出活動名稱&quot;,&quot;2026 浪人祭 Vegabond Fest.&quot;],[&quot;活動類型&quot;,&quot;音樂祭／節&quot;],[&quot;活動所在城市&quot;,&quot;台南&quot;]]">
             <div class="upcoming-event-date-block">
-              <span class="upcoming-event-time">2026 / NOV</span>
-			  <div class="upcoming-event-date-row"><span class="upcoming-event-date">11.07</span>
-			  <span class="upcoming-event-weekday"><span>週</span><span>六</span></span></div>
+              <div class="upcoming-event-date-row"><span class="upcoming-event-date">11.07</span><span class="upcoming-event-weekday">星期六</span></div>
             </div>
             <div class="upcoming-event-main">
-              <h3>2026 浪人祭 Vegabond Fest.</h3>
-              <div class="upcoming-event-meta"><span>音樂祭／節</span><span>·</span><span>台南</span></div>
+              <h3>浪人祭 Vegabond Fest.</h3>
+              <div class="upcoming-event-meta"><span>音樂祭／節</span><span aria-hidden="true">｜</span><span>台南</span></div>
             </div>
             <span class="upcoming-event-detail detail-hint">詳細資訊</span>
           </article>
@@ -170,9 +160,7 @@
   <!-- 頁尾聲明與網站用途說明。 -->
   <footer class="site-footer" id="management-note">
     <p><strong>GGteens Fan-made Archive</strong></p>
-    <p>本頁面僅用於分享粉絲記錄之公館青少年演出記錄與歌曲作品。</p>
-    <p>所有活動安排及作品資料均以樂團及活動主辦方公開資訊為準。</p>
-    <p>本網站為非官方粉絲製作；「登入」目前以彈窗呈現，尚未連接帳號驗證、權限控管或後台發布功能。</p>
+    <p>粉絲製作・非官方網站；演出與作品資訊以官方公開資料為準。</p>
   </footer>
   <!-- 載入共用互動程式；defer 讓 HTML 解析後再執行。 -->
   <script src="js/main.js" defer></script>
